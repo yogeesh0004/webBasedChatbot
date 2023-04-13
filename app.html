@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Symptom Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .form-page {
+            display: none;
+        }
+
+        .form-page.active {
+            display: block;
+        }
+
+        .form-page h2 {
+            margin-top: 0;
+        }
+
+        .form-page label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .form-page input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #008CBA;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #00698C;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form id="symptom-form" action="#" method="post">
+            <div class="form-page active" id="page-1">
+                <h2>Symptom Checker</h2>
+                <p>Please check all that apply:</p>
+                <!-- <label><input type="checkbox" name="symptom-1" value="1"> Fever</label>
+                <label><input type="checkbox" name="symptom-2" value="1"> Cough</label>
+                <label><input type="checkbox" name="symptom-3" value="1"> Shortness of breath</label>
+                <label><input type="checkbox" name="symptom-4" value="1"> Fatigue</label>
+                <label><input type="checkbox" name="symptom-5" value="1"> Muscle or body aches</label>
+                <label><input type="checkbox" name="symptom-6" value="1"> Headache</label>
+                <label><input type="checkbox" name="symptom-7" value="1"> New loss of taste or smell</label>
+                <label><input type="checkbox" name="symptom-8" value="1"> Sore throat</label>
+                <label><input type="checkbox" name="symptom-9" value="1"> Congestion or runny nose</label>
+                <label><input type="checkbox" name="symptom-10" value="1"> Nausea or vomiting</label> -->
+
+                <label><input type="checkbox" name="symptom-1" value="1">Itching</label>
+                <label><input type="checkbox" name="symptom-2" value="1">Skin rash</label>
+                <label><input type="checkbox" name="symptom-3" value="1">Nodal skin
+                    eruptions</label>
+                <label><input type="checkbox" name="symptom-4" value="1">Continuous
+                    sneezing</label>
+                <label><input type="checkbox" name="symptom-5" value="1">Nodal skin
+                    eruptions</label>
+                <label><input type="checkbox" name="symptom-6" value="1">Chills</label>
+                <label><input type="checkbox" name="symptom-7" value="1">Joint pain</label>
+                <label><input type="checkbox" name="symptom-8" value="1">Stomach pain</label>
+                <label><input type="checkbox" name="symptom-9" value="1">Acidity</label>
+                <label><input type="checkbox" name="symptom-10" value="1">Ulcers on tongue</label>
+                <label><input type="checkbox" name="symptom-11" value="1">Muscle wasting</label>
+                <label><input type="checkbox" name="symptom-12" value="1">Vomiting</label>
+                <label><input type="checkbox" name="symptom-13" value="1">Burning
+                    micturition</label>
+                <label><input type="checkbox" name="symptom-14" value="1">Spotting
+                    urination</label>
+                <label><input type="checkbox" name="symptom-15" value="1">Fatigue</label>
+                <label><input type="checkbox" name="symptom-16" value="1">Weight gain</label>
+                <label><input type="checkbox" name="symptom-17" value="1">Anxiety</label>
+                <label><input type="checkbox" name="symptom-18" value="1">Cold hands and
+                    feets</label>
+                <label><input type="checkbox" name="symptom-19" value="1">Mood swings</label>
+                <label><input type="checkbox" name="symptom-20" value="1">Weight loss</label>
+
+                <button class="btn" id="next-btn-1">Next</button>
+            </div>
+            <div class="form-page" id="page-2">
+                <h2>Symptom Checker</h2>
+                <p>Please check all that apply:</p>
+                <!-- <label><input type="checkbox" name="symptom-11" value="1"> Diarrhea</label>
+                <label><input type="checkbox" name="symptom-12" value="1"> Chills</label>
+                <label><input type="checkbox" name="symptom-13" value="1"> Repeated shaking with chills</label>
+                <label><input type="checkbox" name="symptom-14" value="1"> Sore throat</label>
+                <label><input type="checkbox" name="symptom-15" value="1"> Congestion or runny nose</label>
+                <label><input type="checkbox" name="symptom-16" value="1"> Nausea or vomiting</label>
+                <label><input type="checkbox" name="symptom-17" value="1"> Fatigue</label>
+                <label><input type="checkbox" name="symptom-18" value="1"> Muscle or body aches</label>
+                <label><input type="checkbox" name="symptom-19" value="1"> Headache</label>
+                <label><input type="checkbox" name="symptom-20" value="1"> New loss of taste or smell</label> -->
+
+
+                <label><input type="checkbox" name="symptom-21" value="1">Restlessness</label>
+                <label><input type="checkbox" name="symptom-22" value="1">Lethargy</label>
+                <label><input type="checkbox" name="symptom-23" value="1">Patches in throat</label>
+                <label><input type="checkbox" name="symptom-24" value="1">Irregular sugar
+                    level</label>
+                <label><input type="checkbox" name="symptom-25" value="1">Cough</label>
+                <label><input type="checkbox" name="symptom-26" value="1">High fever</label>
+                <label><input type="checkbox" name="symptom-27" value="1">Sunken eyes</label>
+                <label><input type="checkbox" name="symptom-28" value="1">Breathlessness</label>
+                <label><input type="checkbox" name="symptom-29" value="1">Sweating</label>
+                <label><input type="checkbox" name="symptom-30" value="1">Dehydration</label>
+                <label><input type="checkbox" name="symptom-31" value="1">Indigestion</label>
+                <label><input type="checkbox" name="symptom-32" value="1">Headache</label>
+                <label><input type="checkbox" name="symptom-33" value="1">Yellowish skin</label>
+                <label><input type="checkbox" name="symptom-34" value="1">Dark urine</label>
+                <label><input type="checkbox" name="symptom-35" value="1">Nausea</label>
+                <label><input type="checkbox" name="symptom-36" value="1">Loss of appetite</label>
+                <label><input type="checkbox" name="symptom-37" value="1">Pain behind the
+                    eyes</label>
+                <label><input type="checkbox" name="symptom-38" value="1">Back pain</label>
+                <label><input type="checkbox" name="symptom-39" value="1">Constipation</label>
+                <label><input type="checkbox" name="symptom-40" value="1">Abdominal pain</label>
+
+                <button class="btn" id="prev-btn-2">Previous</button>
+                <button class="btn" id="next-btn-2">Next</button>
+            </div>
+
+            <div class="form-page" id="page-3">
+                <h2>Symptom Checker</h2>
+                <p>Please check all that apply:</p>
+                <!-- <label><input type="checkbox" name="symptom-11" value="1"> Diarrhea</label>
+                <label><input type="checkbox" name="symptom-12" value="1"> Chills</label>
+                <label><input type="checkbox" name="symptom-13" value="1"> Repeated shaking with chills</label>
+                <label><input type="checkbox" name="symptom-14" value="1"> Sore throat</label>
+                <label><input type="checkbox" name="symptom-15" value="1"> Congestion or runny nose</label>
+                <label><input type="checkbox" name="symptom-16" value="1"> Nausea or vomiting</label>
+                <label><input type="checkbox" name="symptom-17" value="1"> Fatigue</label>
+                <label><input type="checkbox" name="symptom-18" value="1"> Muscle or body aches</label>
+                <label><input type="checkbox" name="symptom-19" value="1"> Headache</label>
+                <label><input type="checkbox" name="symptom-20" value="1"> New loss of taste or smell</label> -->
+
+
+                <label><input type="checkbox" name="symptom-41" value="1">Diarrhoea</label>
+                <label><input type="checkbox" name="symptom-42" value="1">Mild fever</label>
+                <label><input type="checkbox" name="symptom-43" value="1">Yellow urine</label>
+                <label><input type="checkbox" name="symptom-44" value="1">Yellowing of eyes</label>
+                <label><input type="checkbox" name="symptom-45" value="1">Acute liver
+                    failure</label>
+                <label><input type="checkbox" name="symptom-46" value="1">Fluid overload</label>
+                <label><input type="checkbox" name="symptom-47" value="1">Welling of stomach</label>
+                <label><input type="checkbox" name="symptom-48" value="1">Swelled lymph
+                    nodes</label>
+                <label><input type="checkbox" name="symptom-49" value="1">Malaise</label>
+                <label><input type="checkbox" name="symptom-50" value="1">Blurred and
+                    distorted
+                    vision</label>
+                <label><input type="checkbox" name="symptom-51" value="1">Phlegm</label>
+                <label><input type="checkbox" name="symptom-52" value="1">Throat irritation</label>
+                <label><input type="checkbox" name="symptom-53" value="1">Redness of eyes</label>
+                <label><input type="checkbox" name="symptom-54" value="1">Yellowing of eyes</label>
+                <label><input type="checkbox" name="symptom-55" value="1">Sinus pressure</label>
+                <label><input type="checkbox" name="symptom-56" value="1">Runny nose</label>
+                <label><input type="checkbox" name="symptom-57" value="1">Congestion</label>
+                <label><input type="checkbox" name="symptom-58" value="1">Chest pain</label>
+                <label><input type="checkbox" name="symptom-59" value="1">Weakness in limbs</label>
+                <label><input type="checkbox" name="symptom-60" value="1">Fast heart rate</label>
+
+                <button class="btn" id="prev-btn-3">Previous</button>
+                <button class="btn" id="next-btn-3">Next</button>
+            </div>
+
+            <div class="form-page" id="page-4">
+                <h2>Symptom Checker</h2>
+                <p>Please check all that apply:</p>
+                <!-- <label><input type="checkbox" name="symptom-11" value="1"> Diarrhea</label>
+                <label><input type="checkbox" name="symptom-12" value="1"> Chills</label>
+                <label><input type="checkbox" name="symptom-13" value="1"> Repeated shaking with chills</label>
+                <label><input type="checkbox" name="symptom-14" value="1"> Sore throat</label>
+                <label><input type="checkbox" name="symptom-15" value="1"> Congestion or runny nose</label>
+                <label><input type="checkbox" name="symptom-16" value="1"> Nausea or vomiting</label>
+                <label><input type="checkbox" name="symptom-17" value="1"> Fatigue</label>
+                <label><input type="checkbox" name="symptom-18" value="1"> Muscle or body aches</label>
+                <label><input type="checkbox" name="symptom-19" value="1"> Headache</label>
+                <label><input type="checkbox" name="symptom-20" value="1"> New loss of taste or smell</label> -->
+
+
+                <label><input type="checkbox" name="symptom-61" value="Pain during bowel movements">Pain during bowel
+                    movements</label>
+                <label><input type="checkbox" name="symptom-62" value="1">Bloody stool</label>
+                <label><input type="checkbox" name="symptom-63" value="1">Irritation in anus</label>
+                <label><input type="checkbox" name="symptom-64" value="1">Neck pain</label>
+                <label><input type="checkbox" name="symptom-65" value="1">Dizziness</label>
+                <label><input type="checkbox" name="symptom-66" value="1">Cramps</label>
+                <label><input type="checkbox" name="symptom-67" value="1">Bruising</label>
+                <label><input type="checkbox" name="symptom-68" value="1">Obesity</label>
+                <label><input type="checkbox" name="symptom-69" value="1">Swollen legs</label>
+                <label><input type="checkbox" name="symptom-70" value="1">Swollen blood vessels</label>
+                <label><input type="checkbox" name="symptom-71" value="1">Puffy face and eyes</label>
+                <label><input type="checkbox" name="symptom-72" value="1">Enlarged thyroid</label>
+                <label><input type="checkbox" name="symptom-73" value="1">Brittle nails</label>
+                <label><input type="checkbox" name="symptom-74" value="1">Swollen extremeties</label>
+                <label><input type="checkbox" name="symptom-75" value="1">Excessive hunger</label>
+                <label><input type="checkbox" name="symptom-76" value="1">Extra marital contacts</label>
+                <label><input type="checkbox" name="symptom-77" value="1">Drying and tingling
+                    lips</label>
+                <label><input type="checkbox" name="symptom-78" value="1">Slurred speech</label>
+                <label><input type="checkbox" name="symptom-79" value="1">Knee pain</label>
+                <label><input type="checkbox" name="symptom-80" value="1">Hip joint pain</label>
+
+                <button class="btn" id="prev-btn-4">Previous</button>
+                <button class="btn" id="next-btn-4">Next</button>
+            </div>
+
+            <div class="form-page" id="page-5">
+                <h2>Symptom Checker</h2>
+                <p>Please check all that apply:</p>
+
+                <label><input type="checkbox" name="symptom-81" value="Pain during bowel movements">Pain during bowel
+                    movements</label>
+                <label><input type="checkbox" name="symptom-82" value="1">Stiff neck</label>
+                <label><input type="checkbox" name="symptom-83" value="1">Swelling joints</label>
+                <label><input type="checkbox" name="symptom-84" value="1">Movement stiffness</label>
+                <label><input type="checkbox" name="symptom-85" value="1">Spinning movements</label>
+                <label><input type="checkbox" name="symptom-86" value="1">Loss of balance</label>
+                <label><input type="checkbox" name="symptom-87" value="1">Unsteadiness</label>
+                <label><input type="checkbox" name="symptom-88" value="1">Weakness of one body
+                    side</label>
+                <label><input type="checkbox" name="symptom-89" value="1">Loss of smell</label>
+                <label><input type="checkbox" name="symptom-90" value="1">Bladder discomfort</label>
+                <label><input type="checkbox" name="symptom-91" value="1">Foul smell of
+                    urine</label>
+                <label><input type="checkbox" name="symptom-92" value="1">Continuous feel of
+                    urine</label>
+                <label><input type="checkbox" name="symptom-93" value="1">Passage of gases</label>
+                <label><input type="checkbox" name="symptom-94" value="1">Internal itching</label>
+                <label><input type="checkbox" name="symptom-95" value="1">Toxic look
+                    (typhos)</label>
+                <label><input type="checkbox" name="symptom-96" value="1">Depression</label>
+                <label><input type="checkbox" name="symptom-97" value="1">Irritability</label>
+                <label><input type="checkbox" name="symptom-98" value="1">Muscle pain</label>
+                <label><input type="checkbox" name="symptom-99" value="1">Altered sensorium</label>
+                <label><input type="checkbox" name="symptom-100" value="1">Red spots over
+                    body</label>
+                <button class="btn" id="prev-btn-5">Previous</button>
+                <button class="btn" id="next-btn-5">Next</button>
+            </div>
+
+            <div class="form-page" id="page-6">
+                <h2>Symptom Checker</h2>
+                <p>Please check all that apply:</p>
+                <label><input type="checkbox" name="symptom-101" value="1">Belly pain</label>
+                <label><input type="checkbox" name="symptom-102" value="1">Abnormal
+                    menstruation</label>
+                <label><input type="checkbox" name="symptom-103" value="1">Dischromic
+                    patchess</label>
+                <label><input type="checkbox" name="symptom-104" value="1">Watering from eyes</label>
+                <label><input type="checkbox" name="symptom-105" value="1">Increased appetite</label>
+                <label><input type="checkbox" name="symptom-106" value="1">Polyuria</label>
+                <label><input type="checkbox" name="symptom-107" value="1">Family history</label>
+                <label><input type="checkbox" name="symptom-108" value="1">Mucoid sputum
+                </label>
+                <label><input type="checkbox" name="symptom-109" value="1">Rusty sputum</label>
+                <label><input type="checkbox" name="symptom-110" value="1">Lack of
+                    concentration</label>
+                <label><input type="checkbox" name="symptom-111" value="1">Visual
+                    disturbances</label>
+                <label><input type="checkbox" name="symptom-112" value="1">Receiving blood
+                    transfusion
+                </label>
+                <label><input type="checkbox" name="symptom-113" value="1">Receiving
+                    unsterile
+                    injections</label>
+                <label><input type="checkbox" name="symptom-114" value="1">Internal itching</label>
+                <label><input type="checkbox" name="symptom-115" value="1">Coma</label>
+                <label><input type="checkbox" name="symptom-116" value="1">Depression</label>
+                <label><input type="checkbox" name="symptom-117" value="1">Stomach bleeding</label>
+                <label><input type="checkbox" name="symptom-118" value="1">Distention of
+                    abdomen</label>
+                <label><input type="checkbox" name="symptom-119" value="1">History of alcohol
+                    consumption</label>
+                <label><input type="checkbox" name="symptom-120" value="1">Fluid overload</label>
+                <button class="btn" id="prev-btn-6">Previous</button>
+                <button class="btn" id="next-btn-6">Next</button>
+            </div>
+
+            <div class="form-page" id="page-7">
+                <h2>Symptom Checker</h2>
+                <p>Please check all that apply:</p>
+                <label><input type="checkbox" name="symptom-121" value="1">Blood in sputum</label><br>
+                <label><input type="checkbox" name="symptom-122" value="1">Prominent veins on
+                    calf</label><br>
+                <label><input type="checkbox" name="symptom-123" value="1">Palpitations</label><br>
+                <label><input type="checkbox" name="symptom-124" value="1">Painful walking</label><br>
+                <label><input type="checkbox" name="symptom-125" value="1">Pus filled pimples</label><br>
+                <label><input type="checkbox" name="symptom-126" value="1">Blackheads</label><br>
+                <label><input type="checkbox" name="symptom-127" value="1">Scurring</label><br>
+                <label><input type="checkbox" name="symptom-128" value="1">Skin peeling
+                </label><br>
+                <label><input type="checkbox" name="symptom-129" value="1">Silver like dusting</label><br>
+                <label><input type="checkbox" name="symptom-130" value="1">Small dents in nails</label><br>
+                <label><input type="checkbox" name="symptom-131" value="1">Inflammatory nails</label><br>
+                <label><input type="checkbox" name="symptom-132" value="1">Blister
+                </label><br>
+                <label><input type="checkbox" name="symptom-133" value="1">Red sore around nose
+                </label><br>
+                <label><input type="checkbox" name="symptom-134" value="1">Yellow crust ooze</label><br>
+                <button class="btn" id="prev-btn-7">Previous</button>
+                <button class="btn" id="submit-btn">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        const symptomForm = document.getElementById("symptom-form");
+        const formPages = symptomForm.querySelectorAll(".form-page");
+        let currentFormPage = 0;
+
+        function showFormPage(index) {
+            formPages[currentFormPage].classList.remove("active");
+            formPages[index].classList.add("active");
+            currentFormPage = index;
+        }
+
+        document.getElementById("next-btn-1").addEventListener("click", function (event) {
+            event.preventDefault();
+            showFormPage(1);
+        });
+
+        document.getElementById("next-btn-2").addEventListener("click", function (event) {
+            event.preventDefault();
+            showFormPage(2);
+        });
+        document.getElementById("next-btn-3").addEventListener("click", function (event) {
+            event.preventDefault();
+            showFormPage(3);
+        });
+        document.getElementById("next-btn-4").addEventListener("click", function (event) {
+            event.preventDefault();
+            showFormPage(4);
+        });
+        document.getElementById("next-btn-5").addEventListener("click", function (event) {
+            event.preventDefault();
+            showFormPage(5);
+        });
+        document.getElementById("next-btn-6").addEventListener("click", function (event) {
+            event.preventDefault();
+            showFormPage(6);
+        });
+
+        document.getElementById("prev-btn-2").addEventListener("click", function (event) {
+            event.preventDefault();
+            showFormPage(0);
+        });
+        document.getElementById("prev-btn-3").addEventListener("click", function (event) {
+            event.preventDefault();
+            showFormPage(1);
+        });
+        document.getElementById("prev-btn-4").addEventListener("click", function (event) {
+            event.preventDefault();
+            showFormPage(2);
+        });
+        document.getElementById("prev-btn-5").addEventListener("click", function (event) {
+            event.preventDefault();
+            showFormPage(3);
+        });
+        document.getElementById("prev-btn-6").addEventListener("click", function (event) {
+            event.preventDefault();
+            showFormPage(4);
+        });
+        document.getElementById("prev-btn-7").addEventListener("click", function (event) {
+            event.preventDefault();
+            showFormPage(5);
+        });
+
+
+        document.getElementById("submit-btn").addEventListener("click", function (event) {
+            event.preventDefault();
+            const checkboxes = symptomForm.querySelectorAll("input[type='checkbox']");
+            let symptoms = [];
+            checkboxes.forEach(function (checkbox) {
+                symptoms.push(checkbox.checked ? "1" : "0");
+            });
+            console.log(symptoms);
+
+            // submit the form data to the server here
+        });
+    </script>
+
+     
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Result Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(11, 11, 78);
+            color: white;
+        }
+
+        h1 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .parkinson {
+            color: green;
+        }
+
+        .not-parkinson {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Result</h1>
+    <p class="result {% if result == 'Parkinson' %} parkinson {% else %} not-parkinson {% endif %}">{{ result }}</p>
+</body>
+
+</html>
